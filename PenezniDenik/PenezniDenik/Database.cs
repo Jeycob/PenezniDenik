@@ -62,7 +62,7 @@ namespace PenezniDenik
             int rowsUpdated = mycommand.ExecuteNonQuery();
             cnn.Close();
             return rowsUpdated;
-
+            
         }
     }
 }

@@ -12,11 +12,14 @@ namespace PenezniDenik
     class Database
     {
         String dbConnection;
-
+        SQLiteConnection cnn;
         public Database()
         {
+            SQLiteConnection.CreateFile("databaseFile.db3");
 
-            dbConnection = "Data Source=db.s3db";
+            cnn = new System.Data.SQLite.SQLiteConnection("data source=databaseFile.db3");
+            
+             cnn.Open(); 
 
         }
         public Database(String inputFile)
@@ -32,7 +35,7 @@ namespace PenezniDenik
             DataTable dt = new DataTable();
             try
             {
-                SQLiteConnection cnn = new SQLiteConnection(dbConnection);
+                
                 cnn.Open();
                 SQLiteCommand mycommand = new SQLiteCommand(cnn);
                 mycommand.CommandText = sql;

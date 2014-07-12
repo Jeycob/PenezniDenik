@@ -15,9 +15,9 @@ namespace PenezniDenik
         SQLiteConnection cnn;
         public Database()
         {
-            SQLiteConnection.CreateFile("databaseFile.db3");
+            SQLiteConnection.CreateFile("database.db3");
 
-            cnn = new System.Data.SQLite.SQLiteConnection("data source=databaseFile.db3");
+            cnn = new System.Data.SQLite.SQLiteConnection("data source=database.db3");
             
              cnn.Open(); 
 

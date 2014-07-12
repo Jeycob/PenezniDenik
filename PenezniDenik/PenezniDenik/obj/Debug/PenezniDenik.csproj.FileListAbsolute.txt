@@ -7,3 +7,7 @@ C:\Users\Jakub\Source\Repos\PD\PenezniDenik\PenezniDenik\PenezniDenik\obj\Debug\
 C:\Users\Jakub\Source\Repos\PD\PenezniDenik\PenezniDenik\PenezniDenik\obj\Debug\PenezniDenik.Form1.resources
 C:\Users\Jakub\Source\Repos\PD\PenezniDenik\PenezniDenik\PenezniDenik\obj\Debug\PenezniDenik.Properties.Resources.resources
 C:\Users\Jakub\Source\Repos\PD\PenezniDenik\PenezniDenik\PenezniDenik\obj\Debug\PenezniDenik.csproj.GenerateResource.Cache
+C:\Users\Jakub\Source\Repos\PD\PenezniDenik\PenezniDenik\PenezniDenik\bin\Debug\PdfSharp.dll
+C:\Users\Jakub\Source\Repos\PD\PenezniDenik\PenezniDenik\PenezniDenik\bin\Debug\PdfSharp.pdb
+C:\Users\Jakub\Source\Repos\PD\PenezniDenik\PenezniDenik\PenezniDenik\bin\Debug\PdfSharp.xml
+C:\Users\Jakub\Source\Repos\PD\PenezniDenik\PenezniDenik\PenezniDenik\bin\Debug\de\PdfSharp.resources.dll

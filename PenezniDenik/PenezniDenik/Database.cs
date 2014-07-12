@@ -13,11 +13,14 @@ namespace PenezniDenik
     class Database
     {
         String dbConnection;
-       public SQLiteConnection cnn;
+        private SQLiteConnection cnn;
+
         public Database()
         {
-           if (File.Exists("database.db3"));
-            SQLiteConnection.CreateFile("database.db3");
+            if (File.Exists("database.db3"))
+            {
+                SQLiteConnection.CreateFile("database.db3");
+            }
 
             cnn = new System.Data.SQLite.SQLiteConnection("data source=database.db3");
             

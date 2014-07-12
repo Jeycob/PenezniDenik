@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 using System.Data.SQLite;
 using System.Data;
 using System.Collections.Generic;
+using System.IO;
 
 namespace PenezniDenik
 {
     class Database
     {
         String dbConnection;
-        SQLiteConnection cnn;
+       public SQLiteConnection cnn;
         public Database()
         {
+           if (File.Exists("database.db3"));
             SQLiteConnection.CreateFile("database.db3");
 
             cnn = new System.Data.SQLite.SQLiteConnection("data source=database.db3");
             
-             cnn.Open(); 
-
         }
         public Database(String inputFile)
         {

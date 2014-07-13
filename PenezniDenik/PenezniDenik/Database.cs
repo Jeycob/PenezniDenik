@@ -22,9 +22,10 @@ namespace PenezniDenik
                 SQLiteConnection.CreateFile("database.db3");
             }
 
-            cnn = new System.Data.SQLite.SQLiteConnection("data source=database.db3");
+            cnn = new System.Data.SQLite.SQLiteConnection("data source = database.db3");
             
         }
+
         public Database(String inputFile)
         {
 

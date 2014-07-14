@@ -28,82 +28,97 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonPrint = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.dbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.labelFirstName = new System.Windows.Forms.Label();
+            this.labelLastName = new System.Windows.Forms.Label();
+            this.labelAge = new System.Windows.Forms.Label();
+            this.textBoxFirstName = new System.Windows.Forms.TextBox();
+            this.textBoxLastName = new System.Windows.Forms.TextBox();
+            this.textBoxAge = new System.Windows.Forms.TextBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.buttonSafe = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // buttonPrint
+            // labelFirstName
             // 
-            this.buttonPrint.Location = new System.Drawing.Point(371, 12);
-            this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(75, 23);
-            this.buttonPrint.TabIndex = 1;
-            this.buttonPrint.Text = "Print";
-            this.buttonPrint.UseVisualStyleBackColor = true;
-            this.buttonPrint.Click += new System.EventHandler(this.printButton);
+            this.labelFirstName.AutoSize = true;
+            this.labelFirstName.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelFirstName.Location = new System.Drawing.Point(86, 31);
+            this.labelFirstName.Name = "labelFirstName";
+            this.labelFirstName.Size = new System.Drawing.Size(89, 18);
+            this.labelFirstName.TabIndex = 0;
+            this.labelFirstName.Text = "FirstName:";
             // 
-            // dataGridView1
+            // labelLastName
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 63);
-            this.dataGridView1.MinimumSize = new System.Drawing.Size(50, 50);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataGridView1.Size = new System.Drawing.Size(445, 187);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.labelLastName.AutoSize = true;
+            this.labelLastName.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelLastName.Location = new System.Drawing.Point(86, 70);
+            this.labelLastName.Name = "labelLastName";
+            this.labelLastName.Size = new System.Drawing.Size(86, 18);
+            this.labelLastName.TabIndex = 2;
+            this.labelLastName.Text = "LastName:";
             // 
-            // menuStrip1
+            // labelAge
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dbToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(469, 24);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
+            this.labelAge.AutoSize = true;
+            this.labelAge.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelAge.Location = new System.Drawing.Point(86, 110);
+            this.labelAge.Name = "labelAge";
+            this.labelAge.Size = new System.Drawing.Size(40, 18);
+            this.labelAge.TabIndex = 3;
+            this.labelAge.Text = "Age:";
             // 
-            // dbToolStripMenuItem
+            // textBoxFirstName
             // 
-            this.dbToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newDBToolStripMenuItem});
-            this.dbToolStripMenuItem.Name = "dbToolStripMenuItem";
-            this.dbToolStripMenuItem.Size = new System.Drawing.Size(33, 20);
-            this.dbToolStripMenuItem.Text = "db";
-            this.dbToolStripMenuItem.Click += new System.EventHandler(this.dbToolStripMenuItem_Click);
+            this.textBoxFirstName.Location = new System.Drawing.Point(181, 29);
+            this.textBoxFirstName.Name = "textBoxFirstName";
+            this.textBoxFirstName.Size = new System.Drawing.Size(309, 20);
+            this.textBoxFirstName.TabIndex = 4;
             // 
-            // newDBToolStripMenuItem
+            // textBoxLastName
             // 
-            this.newDBToolStripMenuItem.Name = "newDBToolStripMenuItem";
-            this.newDBToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.newDBToolStripMenuItem.Text = "newDB";
-            this.newDBToolStripMenuItem.Click += new System.EventHandler(this.newDBToolStripMenuItem_Click);
+            this.textBoxLastName.Location = new System.Drawing.Point(181, 70);
+            this.textBoxLastName.Name = "textBoxLastName";
+            this.textBoxLastName.Size = new System.Drawing.Size(309, 20);
+            this.textBoxLastName.TabIndex = 5;
+            // 
+            // textBoxAge
+            // 
+            this.textBoxAge.Location = new System.Drawing.Point(181, 108);
+            this.textBoxAge.Name = "textBoxAge";
+            this.textBoxAge.Size = new System.Drawing.Size(309, 20);
+            this.textBoxAge.TabIndex = 6;
+            // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(50, 245);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(517, 198);
+            this.listView1.TabIndex = 7;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // buttonSafe
+            // 
+            this.buttonSafe.Location = new System.Drawing.Point(367, 178);
+            this.buttonSafe.Name = "buttonSafe";
+            this.buttonSafe.Size = new System.Drawing.Size(123, 26);
+            this.buttonSafe.TabIndex = 8;
+            this.buttonSafe.Text = "Safe";
+            this.buttonSafe.UseVisualStyleBackColor = true;
+            this.buttonSafe.Click += new System.EventHandler(this.buttonSafe_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(469, 262);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.buttonPrint);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(485, 300);
+            this.ClientSize = new System.Drawing.Size(617, 496);
+            this.Controls.Add(this.buttonSafe);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.textBoxAge);
+            this.Controls.Add(this.textBoxLastName);
+            this.Controls.Add(this.textBoxFirstName);
+            this.Controls.Add(this.labelAge);
+            this.Controls.Add(this.labelLastName);
+            this.Controls.Add(this.labelFirstName);
             this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,11 +126,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttonPrint;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem dbToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem newDBToolStripMenuItem;
+        private System.Windows.Forms.Label labelFirstName;
+        private System.Windows.Forms.Label labelLastName;
+        private System.Windows.Forms.Label labelAge;
+        private System.Windows.Forms.TextBox textBoxFirstName;
+        private System.Windows.Forms.TextBox textBoxLastName;
+        private System.Windows.Forms.TextBox textBoxAge;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button buttonSafe;
+
     }
 }
 

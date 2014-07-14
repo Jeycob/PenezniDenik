@@ -9,45 +9,48 @@ namespace PenezniDenik
 {
     public partial class Form1 : Form
     {
-        private Database db;
+        private string ConnectionString;
+
         public Form1()
         {
             InitializeComponent();
+
+            ConnectionString = @"data source = database.db3";
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void buttonSafe_Click(object sender, EventArgs e)
         {
-                       
+            using (SQLiteConnection con = new SQLiteConnection(ConnectionString))
+            {
+                try
+                {
+                    SQLiteCommand command = new SQLiteCommand();
+                    command.CommandText = @"INSERT INTO User(FirstName, LastName, Age ) VALUES (@FirstName, @LastName, @Age) ";
+                    //command.Connection = con;
+                    command.Parameters.Add(new SQLiteParameter("@FirstName", textBoxFirstName.Text));
+                    command.Parameters.Add(new SQLiteParameter("@LastName", textBoxLastName.Text));
+                    command.Parameters.Add(new SQLiteParameter("@Age", textBoxAge.Text));
+                    command.Connection = con;
+                    con.Open();
+
+                    int i = command.ExecuteNonQuery();
+
+                    if (i == 1)
+                    {
+                        MessageBox.Show("User created Successfully");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
         }
 
-        private void printButton(object sender, EventArgs e)
-        {
-
-            new Graphics.PdfWriter().PrijmovyPokladniDoklad();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dbToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void newDBToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            db = new Database();
-            String s = "CREATE TABLE IF NOT EXISTS \"main\".\"friends\" (\"idfriend\" INTEGER, \"firstname\" VARCHAR, \"lastname\" VARCHAR, \"age\" INTEGER)";
-            db.GetDataTable(s);
-
-            s = "select * from main.friends;";
-            DataTable recipe;
-            recipe = db.GetDataTable(s);
-            dataGridView1.DataSource = recipe;
-        }
-
-     
+            //vypisovani do pdf
+            //new Graphics.PdfWriter().PrijmovyPokladniDoklad();
     }
 }

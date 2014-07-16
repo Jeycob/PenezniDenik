@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.labelFirstName = new System.Windows.Forms.Label();
             this.labelLastName = new System.Windows.Forms.Label();
             this.labelAge = new System.Windows.Forms.Label();
@@ -36,6 +37,11 @@
             this.textBoxAge = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.buttonSafe = new System.Windows.Forms.Button();
+            this.columnID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnFirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnLastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnAge = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelFirstName
@@ -91,11 +97,20 @@
             // 
             // listView1
             // 
-            this.listView1.Location = new System.Drawing.Point(50, 245);
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnID,
+            this.columnFirstName,
+            this.columnLastName,
+            this.columnAge});
+            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
+            this.listView1.Location = new System.Drawing.Point(147, 238);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(517, 198);
+            this.listView1.Size = new System.Drawing.Size(293, 198);
             this.listView1.TabIndex = 7;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // buttonSafe
             // 
@@ -107,9 +122,40 @@
             this.buttonSafe.UseVisualStyleBackColor = true;
             this.buttonSafe.Click += new System.EventHandler(this.buttonSafe_Click);
             // 
+            // columnID
+            // 
+            this.columnID.Text = "ID";
+            this.columnID.Width = 33;
+            // 
+            // columnFirstName
+            // 
+            this.columnFirstName.Text = "FirstName";
+            this.columnFirstName.Width = 89;
+            // 
+            // columnLastName
+            // 
+            this.columnLastName.Text = "LastName";
+            this.columnLastName.Width = 79;
+            // 
+            // columnAge
+            // 
+            this.columnAge.Text = "Age";
+            this.columnAge.Width = 87;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(141, 178);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(131, 25);
+            this.btnUpdate.TabIndex = 9;
+            this.btnUpdate.Text = "btnUpdate";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(617, 496);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.buttonSafe);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.textBoxAge);
@@ -134,6 +180,11 @@
         private System.Windows.Forms.TextBox textBoxAge;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button buttonSafe;
+        private System.Windows.Forms.ColumnHeader columnID;
+        private System.Windows.Forms.ColumnHeader columnFirstName;
+        private System.Windows.Forms.ColumnHeader columnLastName;
+        private System.Windows.Forms.ColumnHeader columnAge;
+        private System.Windows.Forms.Button btnUpdate;
 
     }
 }

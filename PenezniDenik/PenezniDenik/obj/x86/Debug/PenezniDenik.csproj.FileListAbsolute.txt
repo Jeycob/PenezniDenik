@@ -17,3 +17,4 @@ C:\Users\Tomas\Source\Repos\PenezniDenik\PenezniDenik\PenezniDenik\obj\x86\Debug
 C:\Users\Tomas\Source\Repos\PenezniDenik\PenezniDenik\PenezniDenik\obj\x86\Debug\PenezniDenik.csproj.GenerateResource.Cache
 C:\Users\Tomas\Source\Repos\PenezniDenik\PenezniDenik\PenezniDenik\obj\x86\Debug\PenezniDenik.exe
 C:\Users\Tomas\Source\Repos\PenezniDenik\PenezniDenik\PenezniDenik\obj\x86\Debug\PenezniDenik.pdb
+C:\Users\Tomas\Source\Repos\PenezniDenik\PenezniDenik\PenezniDenik\obj\x86\Debug\PenezniDenik.csprojResolveAssemblyReference.cache

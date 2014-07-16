@@ -29,7 +29,7 @@ namespace PenezniDenik
                     command.Connection = con;
                     command.Parameters.Add(new SQLiteParameter("@FirstName", textBoxFirstName.Text));
                     command.Parameters.Add(new SQLiteParameter("@LastName", textBoxLastName.Text));
-                    command.Parameters.Add(new SQLiteParameter("@Age", textBoxAge.Text));
+                    command.Parameters.Add(new SQLiteParameter("@Age", textBoxAge.Text)); 
                    // command.Connection = con;
                     con.Open();
 
